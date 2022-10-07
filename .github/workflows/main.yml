@@ -19,7 +19,6 @@ jobs:
 
       - name: Get branch name (merge)
         if: github.event_name != 'pull_request'
-        shell: bash
         run: echo Yessssssssssss
         
       - name: Get branch name (merge)
