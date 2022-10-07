@@ -11,4 +11,5 @@ jobs:
     steps:
       - name: Get branch name (merge)
         if: github.event_name != 'pull_request'
-        run: echo Yessssssssssss
+        run: echo ${{ github }}
+
