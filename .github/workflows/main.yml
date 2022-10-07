@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: Get branch name (merge)
         if: github.event_name != 'pull_request'
-        run: echo ${{ github.event_name }}
+        run: echo ${{ toJSON(github) }}
 
