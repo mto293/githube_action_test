@@ -1,9 +1,7 @@
 name: CI
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [ "main" , "test"]
   workflow_dispatch:
 jobs:
   build:
@@ -11,5 +9,5 @@ jobs:
     steps:
       - name: Get branch name (merge)
         if: github.event_name != 'pull_request'
-        run: echo '${{ toJSON(github) }}'
+        run: echo ${{ github.ref_name }}
 
